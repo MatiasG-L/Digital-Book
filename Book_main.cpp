@@ -7,6 +7,7 @@
 ***********************************************************/
 
 #include "raylib.h"
+#include <ifstream> //needed for file data extraction of text file
 
 //------------------------------------------------------------------------------------
 // Program main entry point
