@@ -16,8 +16,8 @@ int main(void)
 {
     // Initialization
     //--------------------------------------------------------------------------------------
-    const int screenWidth = 1000;
-    const int screenHeight = 800;
+    const int screenWidth = 800;
+    const int screenHeight = 900;
     
  
     
@@ -39,6 +39,7 @@ int main(void)
     {
         // Update
         //----------------------------------------------------------------------------------
+        
         
             
             
