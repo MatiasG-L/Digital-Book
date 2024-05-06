@@ -7,7 +7,8 @@
 ***********************************************************/
 
 #include "raylib.h"
-#include <ifstream> //needed for file data extraction of text file
+#include <fstream> //needed for file data extraction
+#include <string>
 
 //------------------------------------------------------------------------------------
 // Program main entry point
@@ -20,8 +21,7 @@ int main(void)
     const int screenWidth = 800;
     const int screenHeight = 900;
     
- 
-    
+    const char *text = "Hello Vro... this is a test.";
 
     InitWindow(screenWidth, screenHeight, " Book ");
 
@@ -31,7 +31,7 @@ int main(void)
 
     SetTargetFPS(60);
    
-   
+    
 
     //--------------------------------------------------------------------------------------
 
@@ -41,13 +41,14 @@ int main(void)
         // Update
         //----------------------------------------------------------------------------------
         
-        
+            
             
             
         // Draw
         //----------------------------------------------------------------------------------
         BeginDrawing();
-
+        
+            DrawText(text, 10, 0, 20, BLACK);
             ClearBackground(RAYWHITE);
           
             
