@@ -7,8 +7,9 @@
 ***********************************************************/
 
 #include "raylib.h"
-#include <fstream> //needed for file data extraction
+#include "Logic.h"
 #include <string>
+#include <iostream>
 
 //------------------------------------------------------------------------------------
 // Program main entry point
@@ -20,9 +21,10 @@ int main(void)
     //--------------------------------------------------------------------------------------
     const int screenWidth = 800;
     const int screenHeight = 900;
-    
-    const char *text = "Hello Vro... this is a test.";
-
+    int fontSize = 20;
+    int ySpacing =10;
+   
+    Vector2 pos = {10,20};
     InitWindow(screenWidth, screenHeight, " Book ");
 
     // NOTE: Textures MUST be loaded after Window initialization (OpenGL context is required)
@@ -47,8 +49,8 @@ int main(void)
         // Draw
         //----------------------------------------------------------------------------------
         BeginDrawing();
-        
-            DrawText(text, 10, 0, 20, BLACK);
+            SetTextLineSpacing(20);  
+            DrawTextEx(GetFontDefault(),Logic::LoadText().c_str(), pos, fontSize, ySpacing, BLACK);
             ClearBackground(RAYWHITE);
           
             
